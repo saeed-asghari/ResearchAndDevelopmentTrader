@@ -1,1 +1,20 @@
-<p>home works!</p>
+http://localhost:4200/?lng=fa
+<div class="content" role="main" [dir]="strDir">
+  <!-- Highlight Card -->
+  <div class="card highlight-card card-small">
+    <span>{{ "welcome" | i18next }}</span>
+  </div>
+
+  <br />
+  <p>
+    {{
+      "desc" | i18next: { url: "https://github.com/Romanchuk/angular-i18next" }
+    }}
+  </p>
+</div>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Test</span>
+    <button mat-button>Theme</button>
+  </mat-toolbar-row>
+</mat-toolbar>

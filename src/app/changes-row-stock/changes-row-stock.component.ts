@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StockListService } from '../services/stock-list.service.service';
-import { DynaGrid } from 'lightstreamer-client-web';
+import { DynaGrid, ItemUpdate } from 'lightstreamer-client-web';
 @Component({
   selector: 'app-changes-row-stock',
   templateUrl: './changes-row-stock.component.html',
@@ -97,7 +97,8 @@ export class ChangesRowStockComponent implements OnInit {
         if (info == null) {
           return;
         }
-        console.log("info",info)
+      //  console.log("info",info)
+        console.log("domNode",domNode)
         self.stocks = info;
         //general style and effects
         info.setHotTime(400);

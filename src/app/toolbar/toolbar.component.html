@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Custom Toolbar</span>
+    <butto mat-button [matMenuTriggerFor]="menu">Theme</butto>
+    <mat-menu #menu="matMenu">
+     <button mat-menu-item>Default</button>
+     <button mat-menu-item>New Theme</button>
+     <button></button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
