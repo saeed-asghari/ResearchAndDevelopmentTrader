@@ -2,6 +2,7 @@
 
 <router-outlet></router-outlet>
 <!-- Toolbar -->
-
-
-<app-form></app-form>
+<div [ngClass]="toolbar.themeClass">
+  <app-toolbar #toolbar></app-toolbar>
+  <app-form></app-form>
+</div>

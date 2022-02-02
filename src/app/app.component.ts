@@ -8,4 +8,5 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AppComponent {
   title = 'ResearchAndDevelopmentTrader';
+  theme="theme"
 }

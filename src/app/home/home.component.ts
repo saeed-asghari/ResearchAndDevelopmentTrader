@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent {
   constructor(private route: ActivatedRoute) {}
   lng: string | null | undefined;
-  strDir:any;
+  strDir:Direction =Direction.LTR;
   ngOnInit() {
     this.lng = this.route.snapshot.queryParamMap.get('lng');
     if (this.lng != null && this.lng != undefined && this.lng == 'fa') {
