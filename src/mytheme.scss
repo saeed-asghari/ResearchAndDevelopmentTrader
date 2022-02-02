@@ -1,5 +1,12 @@
 @import "~@angular/material/theming";
-@include mat-core();
+
+
+
+$typo : mat-typography-config(
+  $font-family: 'monospace',
+  $headline: mat-typography-level(32px,48px,700),
+  $body-1: mat-typography-level(16px,24px,500)
+);
 
 $primary: mat-palette($mat-teal);
 $accent: mat-palette($mat-yellow);
@@ -7,4 +14,5 @@ $mytheme: mat-light-theme($primary, $accent);
 
 .theme {
   @include angular-material-theme($mytheme);
+  @include mat-core($typo);
 }
