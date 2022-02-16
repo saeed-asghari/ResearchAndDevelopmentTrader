@@ -19,6 +19,7 @@ import { I18NEXT_SERVICE, I18NextModule, I18NextLoadResult, ITranslationService,
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import LocizeApi from 'i18next-locize-backend';
+import { HighchartsChartModule } from 'highcharts-angular';
 import {Material} from "./material.module";
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
@@ -26,6 +27,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
 import {HttpClientModule} from '@angular/common/http';
+import { HighchartsComponent } from './highcharts/highcharts.component';
+
 const i18nextOptions = {
   debug: true,
   fallbackLng: 'en',
@@ -87,6 +90,7 @@ export const I18N_PROVIDERS = [
     FormComponent,
     ToolbarComponent,
     AgGridComponent,
+    HighchartsComponent,
   ],
   imports: [
     BrowserModule,
@@ -96,6 +100,7 @@ export const I18N_PROVIDERS = [
     jqxButtonModule,
     jqxTabsModule,
     Material,
+    HighchartsChartModule,
     jqxDockingModule,
     AgGridModule.withComponents([]),
     I18NextModule.forRoot(),
@@ -105,6 +110,7 @@ export const I18N_PROVIDERS = [
       { path: 'stocklist', component: StockListComponent },
       { path: 'stocklistchanges', component: ChangesRowStockComponent },
       { path: 'ag-grid', component: AgGridComponent },
+      { path: 'highChart', component: HighchartsComponent },
     ]),
     BrowserAnimationsModule,
     FormsModule
