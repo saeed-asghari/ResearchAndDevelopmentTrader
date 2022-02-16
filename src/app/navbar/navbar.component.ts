@@ -9,7 +9,10 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  
+  themeClass =''
+  ngOnInit(): void {}
+  changeTheme(theme:string) {
+         this.themeClass = theme;
   }
-
 }

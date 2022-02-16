@@ -7,7 +7,9 @@ import { WindowsComponent } from './windows/windows.component';
 import { jqxWindowModule } from 'jqwidgets-ng/jqxwindow';
 import { jqxButtonModule } from 'jqwidgets-ng/jqxbuttons';
 import { jqxDockingModule } from 'jqwidgets-ng/jqxdocking';
+import { jqxTabsModule } from 'jqwidgets-ng/jqxtabs';
 import { NavbarComponent } from './navbar/navbar.component';
+
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { StockListService } from './services/stock-list.service.service';
@@ -21,7 +23,9 @@ import {Material} from "./material.module";
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-
+import { AgGridModule } from 'ag-grid-angular';
+import { AgGridComponent } from './ag-grid/ag-grid.component';
+import {HttpClientModule} from '@angular/common/http';
 const i18nextOptions = {
   debug: true,
   fallbackLng: 'en',
@@ -82,20 +86,25 @@ export const I18N_PROVIDERS = [
     ChangesRowStockComponent,
     FormComponent,
     ToolbarComponent,
+    AgGridComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule, 
     AppRoutingModule,
     jqxWindowModule,
     jqxButtonModule,
+    jqxTabsModule,
     Material,
     jqxDockingModule,
+    AgGridModule.withComponents([]),
     I18NextModule.forRoot(),
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'windows', component: WindowsComponent },
       { path: 'stocklist', component: StockListComponent },
       { path: 'stocklistchanges', component: ChangesRowStockComponent },
+      { path: 'ag-grid', component: AgGridComponent },
     ]),
     BrowserAnimationsModule,
     FormsModule

@@ -2,7 +2,23 @@
 <jqxButton #showWindowButton (onClick)="showWindowButtonClick()" [width]="100">
   Show
 </jqxButton>
+<jqxTabs #jqxTabs
+         [width]="getWidth()" [height]="400" [position]="'top'" [rtl]="true">
+  <ul style="margin-left: 10px;">
+    <li>تب اول</li>
+    <li>تب دوم</li>
+ 
+  </ul>
+  <div style="text-align: right; direction: rtl;">
+   تب1 
+  </div>
+  <div style="text-align: right; direction: rtl;">
+    تب2 
+   </div>
+</jqxTabs>
 <div id="mainDemoContainer" #mainDemoContainer>
+  
+
   <jqxWindow
     #window
     [width]="1024"
@@ -27,4 +43,5 @@
       </div>
     </jqxDocking>
   </jqxWindow>
+
 </div>
