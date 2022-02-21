@@ -9,10 +9,10 @@ import { Observable } from 'rxjs';
   styleUrls: ['./ag-grid.component.css']
 })
 export class AgGridComponent implements OnInit {
-  rowData: Observable<any[]>;
+ // rowData: Observable<any[]>;
 
   constructor(private http: HttpClient) {
-    this.rowData = this.http.get<any[]>('https://www.ag-grid.com/example-assets/small-row-data.json');
+  //  this.rowData = this.http.get<any[]>('https://www.ag-grid.com/example-assets/small-row-data.json');
 }
 
   ngOnInit(): void {
@@ -23,10 +23,10 @@ export class AgGridComponent implements OnInit {
     { field: 'price',sortable: true ,filter: true }
 ];
 
-// rowData = [
-//     { make: 'Toyota', model: 'Celica', price: 35000 },
-//     { make: 'Ford', model: 'Mondeo', price: 32000 },
-//     { make: 'Porsche', model: 'Boxter', price: 72000 }
-// ];
+rowData = [
+    { make: 'Toyota', model: 'Celica', price: 35000 },
+    { make: 'Ford', model: 'Mondeo', price: 32000 },
+    { make: 'Porsche', model: 'Boxter', price: 72000 }
+];
 
 }
