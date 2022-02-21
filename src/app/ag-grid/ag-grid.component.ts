@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class AgGridComponent implements OnInit {
  // rowData: Observable<any[]>;
-
+ lang : boolean = true;
   constructor(private http: HttpClient) {
   //  this.rowData = this.http.get<any[]>('https://www.ag-grid.com/example-assets/small-row-data.json');
 }
@@ -18,7 +18,7 @@ export class AgGridComponent implements OnInit {
   ngOnInit(): void {
   }
   columnDefs: ColDef[] = [
-    { field: 'make',sortable: true ,filter: true, checkboxSelection: true},
+    { field: 'سازنده',sortable: true ,filter: true, checkboxSelection: true},
     { field: 'model' ,sortable: true,filter: true },
     { field: 'price',sortable: true ,filter: true }
 ];
