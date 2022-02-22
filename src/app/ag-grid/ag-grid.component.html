@@ -8,6 +8,11 @@
         [columnDefs]="columnDefs"
         rowSelection="multiple"
         [enableRtl]="lang"
+        [autoGroupColumnDef]="autoGroupColumnDef"
+        [groupDefaultExpanded]="groupDefaultExpanded"
+        [groupSelectsChildren]="true"
+        [overlayLoadingTemplate]="loadingTemplate"
+  [overlayNoRowsTemplate]="noRowsTemplate"
     >
     </ag-grid-angular>
         <!-- [rowData]="rowData | async" -->
