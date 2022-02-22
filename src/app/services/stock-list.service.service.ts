@@ -14,7 +14,6 @@ export class StockListService {
   subscribe(items: string[], fields: string[]) {
     const subscription = new Subscription('MERGE', items, fields);
     subscription.setDataAdapter('QUOTE_ADAPTER');
-
     const lsClient = new LightstreamerClient(
       (document.location.protocol === 'https:' ? 'https' : 'http') +
         '://push.lightstreamer.com',

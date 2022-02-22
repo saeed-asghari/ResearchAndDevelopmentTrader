@@ -56,6 +56,7 @@ export class StockListComponent implements OnInit {
             console.assert(itemIndex !== -1);
             console.assert(fieldIndex !== -1);
             this.stocks[itemIndex][fieldIndex] = val;
+            console.log(val)
           }
         );
         this.ref.detectChanges();
