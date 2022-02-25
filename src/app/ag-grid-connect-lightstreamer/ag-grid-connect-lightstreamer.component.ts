@@ -42,7 +42,7 @@ export class AgGridConnectLightstreamerComponent implements OnInit {
     { stock_name: 'Anduct' },
     { stock_name: 'Bagies Consulting' },
   ];
-  constructor(private service: StockListService, private ref: ChangeDetectorRef) {}
+  constructor(private service: StockListService) {}
 
   ngOnInit() {
     this.service.subscribe(this.itemNames, this.fieldNames).addListener({

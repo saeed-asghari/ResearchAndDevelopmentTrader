@@ -37,6 +37,7 @@ import { HighchartsComponent } from './highcharts/highcharts.component';
 import { KendoComponent } from './kendo/kendo.component';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { AgGridConnectLightstreamerComponent } from './ag-grid-connect-lightstreamer/ag-grid-connect-lightstreamer.component';
+import { KendoLightstreamerComponent } from './kendo-lightstreamer/kendo-lightstreamer.component';
 const i18nextOptions = {
   debug: true,
   fallbackLng: 'en',
@@ -101,6 +102,7 @@ export const I18N_PROVIDERS = [
     HighchartsComponent,
     KendoComponent,
     AgGridConnectLightstreamerComponent,
+    KendoLightstreamerComponent,
   ],
   imports: [
     BrowserModule,
@@ -124,6 +126,7 @@ export const I18N_PROVIDERS = [
       { path: 'ag-grid-to-lightstreamer', component:AgGridConnectLightstreamerComponent  },
       { path: 'highChart', component: HighchartsComponent },
       { path: 'kendo', component: KendoComponent },
+      { path: 'kendo-lightstreamer', component: KendoLightstreamerComponent },
     ]),
     BrowserAnimationsModule,
     FormsModule,
