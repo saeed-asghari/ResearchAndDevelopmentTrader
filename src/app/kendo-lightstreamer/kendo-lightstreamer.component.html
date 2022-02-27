@@ -1,5 +1,15 @@
-<kendo-grid  [kendoGridBinding]="gridData">
+<kendo-grid  [kendoGridBinding]="gridData" [rowClass]="rowCallback">
     <kendo-grid-column field="stock_name" title="stock_name"> </kendo-grid-column>
-    <kendo-grid-column field="last_price" title="last_price"> </kendo-grid-column>
+    <kendo-grid-column field="last_price" title="last_price" [width]="150">
+        <ng-template kendoGridCellTemplate let-dataItem>
+          <div>
+       
+
+            <span>
+              {{ dataItem.last_price }}
+            </span>
+          </div>
+        </ng-template>
+      </kendo-grid-column>
     <kendo-grid-column field="time" title="time"> </kendo-grid-column>
 </kendo-grid>
